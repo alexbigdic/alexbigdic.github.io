@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 12px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>ZapReels Privacy Policy</h1>
+    <p class="meta">Last updated: September 7, 2026</p>
+
+    <h2>1. Information We Collect</h2>
+    <ul>
+        <li><b>Device &amp; network:</b> stable anonymous installation ID (<code>deviceId</code>), OS/app version, device model, language/locale/tags (including <code>en/es/pt-BR/zh-CN/de/fr/it</code> selection), network type, IP address (as seen by our servers and SDKs), and approximate region.</li>
+        <li><b>Advertising IDs:</b> Google Advertising ID (GAID/AAID) or equivalent device-level ad ID, and when opted-in, the ability to attribute an install via that ID.</li>
+        <li><b>Usage &amp; content:</b> dramas viewed, watch progress &amp; position, unlock history (<code>unlockIndex</code>), episodes/durations watched, tasks completed, daily check-in dates &amp; streaks, booster quota, diamond balance &amp; pending delta, home/interstitial/feed ad impression counts, rating usage time, splash shown time, and ad interactions.</li>
+        <li><b>Purchases &amp; entitlement:</b> Play Billing product IDs (<code>zapreels_weekly, zapreels_monthly, zapreels_booster_5/10/20, zapreels_diamond_5000/10000/30000/50000</code>), purchase token, order signature &amp; JSON, purchase time, billing price micros/currency &amp; pricing phases, subscription expiry, pending-purchase state, and anti-double-spend guards.</li>
+        <li><b>Account (if created):</b> user ID, email if provided, profile fields you share. Current builds run anonymous (no email required); data under “account” is the anonymous install ID until you opt into a future login.</li>
+        <li><b>Diagnostics:</b> crash traces via Firebase Crashlytics, ad response info &amp; paid-event value micros/precision/currency (<code>AdValue, responseInfo, adSourceName</code>) for ILRD, and heartbeat event queue payloads.</li>
+        <li><b>Push:</b> Firebase Cloud Messaging token when you allow notifications, and the data-only push payload (<code>title/body/drama_id/start_ep</code>).</li>
+        <li><b>Attribution &amp; referrer:</b> deferred deep-link URL, click IDs, campaign IDs, Play Install Referrer, and Meta install referrer (via Facebook app ID <code>1431674870015167</code>).</li>
+    </ul>
+
+    <h2>2. How We Collect Information</h2>
+    <p>We collect information: (a) automatically on-device through our SDKs and the App; (b) when you voluntarily provide it (support messages, account creation); (c) from third-party partners (analytics, ads, attribution, Offerwall); (d) via HMAC-signed API calls to our backend (<code>https://hwdj.nqlian.com/</code> in release, test endpoint in debug) carrying <code>X-Device-Id, X-Ts, X-Nonce, Rapid-Api v2.HMAC-SHA256</code> headers; (e) via Google Play Billing callbacks and the Google Play Install Referrer API; and (f) via your interaction with the UMP consent form.</p>
+
+    <h2>3. Third-Party SDKs</h2>
+    <p>The App integrates the following SDKs. Each processes data under its own policy; we encourage you to review them. Data may include GAID, deviceId, IP, locale, purchase tokens, and ad events, shared only to the extent needed for the listed purpose.</p>
+    <table>
+        <tr><th>Category</th><th>SDK / Provider</th><th>Purpose</th><th>Policy</th></tr>
+        <tr><td>Analytics</td><td>Firebase Analytics (Google)</td><td>Usage analytics, event logging</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analytics</td><td>Firebase Remote Config (Google)</td><td>Feature flags: <code>control_rapid/control_ad/task_config/diamond_config/app_update/subs_pop_config/offerwall_config</code></td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analytics / Attribution</td><td>Adjust (app token <code>2sy17xu2vwu8</code>)</td><td>Install attribution &amp; campaign measurement</td><td>adjust.com/terms/privacy</td></tr>
+        <tr><td>Analytics / Attribution</td><td>Tenjin (key gated, placeholder <code>REPLACE_WITH_TENJIN_API_KEY</code> when disabled)</td><td>Attribution, DMA, subscription vs transaction revenue (ILRD vs purchase)</td><td>tenjin.com/privacy</td></tr>
+        <tr><td>Diagnostics</td><td>Firebase Crashlytics (Google)</td><td>Stability &amp; crash diagnostics</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Messaging</td><td>Firebase Cloud Messaging (Google)</td><td>Push delivery (channel <code>shortdrama_default</code>)</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Advertising (mediation)</td><td>Google AdMob 25.4.0</td><td>Bidding, waterfall, <code>ad_impression</code> / <code>adPaid</code> ILRD</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Advertising</td><td>Pangle 6.5.1.2</td><td>Mediated via AdMob</td><td>pangle.io privacy</td></tr>
+        <tr><td>Advertising</td><td>Liftoff / Vungle 7.7.7</td><td>Mediated via AdMob (interstitial/rewarded)</td><td>liftoff.io / vungle.com privacy</td></tr>
+        <tr><td>Advertising</td><td>InMobi 11.4.1</td><td>Mediated via AdMob</td><td>inmobi.com/privacy</td></tr>
+        <tr><td>Offerwall</td><td>Tapjoy / Unity LevelPlay Offerwall 14.8.0</td><td>Hosted Coins Offerwall, direct (not mediated)</td><td>tapjoy.com/privacy , unity.com/legal/privacy</td></tr>
+        <tr><td>Payments</td><td>Google Play Billing 8.0</td><td>Subscriptions &amp; in-app purchases</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Install</td><td>Google Play Install Referrer</td><td>Install attribution</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Attribution helper</td><td>Meta Facebook SDK (app ID <code>1431674870015167</code>)</td><td>Meta Install Referrer decryption for Tenjin</td><td>facebook.com/privacy</td></tr>
+    </table>
+    <p>If Tenjin or ad SDKs are gated by placeholder/unavailability, their instance is <code>null</code> and no data is sent.</p>
+
+    <h2>4. How We Use Your Information</h2>
+    <p>We use data to: operate the drama catalog &amp; ExoPlayer ViewPager2 player with 3-player LRU pool; compute and track rewards (check-in state machine 7-day, task watch episodes/minutes/ads, diamond ledger <code>pendingDelta</code> + server snapshot, booster quota per-episode); serve and measure ads via eCPM waterfall (<code>control_ad</code>) with slot TTLs (SPLASH 4h, ITS/REWARD/PLAY_BACK 1h, FEED 30m) and feed frequency caps; apply introductory subscription pricing phases and verify entitlement server-side; send best-effort pushes that deep-link to <code>zapreels://drama</code>; detect fraud (clock anti-rollback, in-flight billing guards) and ensure 16 KB page-size compatibility; improve UX and fulfill legal duties; and respond to support.</p>
+
+    <h2>5. Data Sharing and Disclosure</h2>
+    <p>We do not sell your personal information. We may share data:</p>
+    <ul>
+        <li>With the SDK providers in §3 for their listed purposes (e.g., GAID/IP to AdMob/Pangle/Liftoff/InMobi for bidding; deviceId/purchase token to Google Play; <code>AdValue/responseInfo</code> to Firebase/Tenjin/Adjust for ILRD; Offerwall data to Tapjoy/Unity and its advertisers);</li>
+        <li>With our backend <code>hwdj.nqlian.com</code> for HMAC-verified API calls;</li>
+        <li>With law enforcement/regulators when required by law;</li>
+        <li>In a merger/acquisition/asset sale;</li>
+        <li>With your consent or at your direction.</li>
+    </ul>
+    <p>Tapjoy is the Offerwall merchant of record for Coins; we do not hold the coin balance locally (only display via <code>getCurrencyBalance</code>).</p>
+
+    <h2>6. Data Retention</h2>
+    <p>Usage/behavioral data up to 24 months. Aggregated anonymized analytics may be retained indefinitely. Local <code>UserPrefs</code> (deviceId, language, diamond/coach balances, task/check-in history, home-interstitial/feed counts, rating usage) and Room tables (<code>history/favorite/ep_cache/event_queue</code>, schema v3) persist until you clear data/reinstall; a destructive downgrade clears them. Heartbeat WorkManager (15 min) retries the <code>event_queue</code> until uploaded. Offerwall coin balance lives on Tapjoy’s server. Account data is retained until you delete your account or request deletion; we delete/anonymize on verified request subject to legal retention.</p>
+
+    <h2>7. Consent, Privacy Choices &amp; DMA</h2>
+    <p>The App shows a Google UMP consent form on first launch (where required). <b>Fail-closed:</b> while status is <code>UNKNOWN</code> or <code>DENIED</code>, ad requests are suppressed (<code>ConsentGate.canRequestAds()</code>). Debug builds bypass <code>UNKNOWN→NOT_REQUIRED</code> with a logged override.</p>
+    <p>When you grant/deny, consent is fanned out to:</p>
+    <ul>
+        <li><b>Pangle</b> via <code>PAGConsent</code>,</li>
+        <li><b>Liftoff/Vungle</b> via <code>VunglePrivacySettings.setGDPRStatus/setCCPAStatus</code>,</li>
+        <li><b>InMobi</b> via <code>InMobiPrivacyCompliance.setDoNotSell(!granted)</code>,</li>
+        <li><b>Tapjoy</b> via <code>TJPrivacyPolicy setUSPrivacy / setBelowConsentAge / setUsageStatsConsent</code> (subjectToGdpr hard-true),</li>
+        <li><b>Tenjin</b> via <code>optIn/optOut</code> plus Google DMA <code>setGoogleDMAParameters / optInGoogleDMA / optOutGoogleDMA</code> (we do not call Tenjin’s <code>optInOutUsingCMP</code> — it would override our fail-closed optOut when TCF is empty).</li>
+    </ul>
+    <p>Tenjin connects with a 60s throttle (<code>setConnectInterval(60s)</code>) and reconnects on each <code>onResume</code>; revenue is reported in separate channels: subscriptions via <code>subscription(Purchase, price, currency)</code> (last pricing phase = regular price) and one-time In-App via <code>transaction</code> — <code>iap_purchase</code> events carry no revenue to avoid double-count.</p>
+    <p>You can withdraw consent by re-showing the UMP form (in-app settings where available) or via system settings; you can also reset GAID, enable “Opt out of Ads Personalization,” disable pushes via <code>Settings → Push</code> or system notification settings, and withhold Offerwall consent (the “Earn Coins” button gates on <code>_connected</code> and shows “loading” if not connected).</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>The App is not directed to children under 13 and does not knowingly collect data from them. We tag requests with <code>setTagForUnderAgeOfConsent(false)</code> and take fail-closed steps to avoid showing personalized ads before consent. If we learn a child under 13 has provided data, we will delete it. EEA users under 16 should use the App only with guardian consent.</p>
+
+    <h2>9. Your Rights</h2>
+    <p>Depending on jurisdiction (EEA GDPR, UK GDPR, Brazil LGPD, California CCPA/CPRA, etc.), you may have the right to: access personal data we hold; correct inaccurate data; delete your data; restrict or object to processing; receive data in portable format; withdraw consent where processing is based on consent; and opt out of sale/share (we do not sell; InMobi <code>setDoNotSell</code> respects your opt-out). To exercise rights, contact privacy@zapreels.app. We respond within the timeframe required by applicable law.</p>
+
+    <h2>10. Data Security</h2>
+    <p>We apply reasonable technical and organizational measures: <code>usesCleartextTraffic=false</code> + <code>network_security_config</code>, HMAC-SHA256 request signing (<code>Rapid-Api: v2.&lt;hex&gt;</code>), <code>allowBackup=false</code>, R8 full obfuscation + resource shrinking, 16 KB page-size alignment, and WebView locked down (<code>javaScriptEnabled=false, allowFileAccess=false</code>) for the offline legal docs. No method is 100% secure.</p>
+
+    <h2>11. International Data Transfers</h2>
+    <p>Your data may be transferred to and processed in countries outside your residence, including the United States and other regions where Google, Adjust, Tenjin, Pangle, Liftoff, InMobi, and Tapjoy/Unity operate. Where required, transfers rely on Standard Contractual Clauses or adequacy decisions.</p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this Policy from time to time. We will notify you of material changes by posting the updated policy within the App (and updating the “Last updated” date above). Your continued use after the effective date constitutes acceptance.</p>
+
+    <h2>13. Contact Us</h2>
+    <p>If you have questions or concerns about this Policy or our data practices, contact privacy@zapreels.app. For Terms matters use support@zapreels.app.</p>
+</body>
+</html>
