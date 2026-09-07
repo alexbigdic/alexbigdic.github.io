@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 14px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>ZapReels Terms of Service</h1>
+    <p class="meta">Last updated: September 7, 2026</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By downloading, installing, or using the ZapReels application ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+
+    <h2>2. Eligibility</h2>
+    <p>You must be at least 13 years old (or the age of majority in your jurisdiction, 16 in the EEA where applicable) to use the App. By using the App, you represent and warrant that you meet this age requirement. If you are under the age of majority, a parent or legal guardian must review and consent to these Terms on your behalf. The App tags itself as not directed to children under 13 and does not knowingly apply child-directed treatment.</p>
+
+    <h2>3. Account Registration</h2>
+    <p>The App is usable without creating an account. At install we generate a stable anonymous device ID that identifies your installation for login, history, and support. Certain features may later require an account; you are responsible for keeping any credentials confidential and for all activity under your installation. You agree to provide accurate information and keep it up to date. Current builds run in anonymous mode (device-ID identity); logging out only fires analytics and does not by itself delete local data — see Privacy Policy for deletion.</p>
+
+    <h2>4. Virtual Items: Diamonds, Booster Packs &amp; Offerwall Coins</h2>
+    <p>Virtual items have no real-world monetary value, are non-transferable, non-exchangeable for cash, and may not be sold, gifted, or redeemed outside the App. We may modify, suspend, or discontinue any virtual item at any time.</p>
+    <h3>4.1 Diamonds</h3>
+    <p>Diamonds unlock individual episodes. Packs are sold as one-time consumables in Google Play: 5,000 / 10,000 / 30,000 / 50,000 diamonds. Price is shown in your local currency at checkout via Google Play Billing (taxes/fees as applicable). After purchase the item must be “consumed” to credit your balance; an unconsumed purchase cannot be re-bought and Google Play auto-refunds it after ~3 days. Diamonds do not expire, but are forfeited on account termination and cannot be restored after a destructive downgrade of the local database.</p>
+    <h3>4.2 Booster Packs</h3>
+    <p>Booster Packs unlock multiple episodes at once: 5 / 10 / 20 episodes. They are also one-time consumables with the same consume-and-refund rule. Purchase grants a quota (e.g., “Unlock 10 episodes”) that is spent silently as you advance through locked episodes. The episode that triggers the purchase is granted for free and does not consume quota (N-ep pack = current episode free + N future episodes). Quota is stored locally and decremented per unlocked episode.</p>
+    <h3>4.3 Offerwall Coins (Tapjoy-Managed)</h3>
+    <p>The App may offer an “Earn Coins” Offerwall (Unity LevelPlay / Tapjoy). Coins are a separate, Tapjoy-hosted balance displayed via <code>getCurrencyBalance</code> and credited via <code>setEarnedCurrencyListener</code>. They are independent of diamonds, are not written to the diamond ledger, and are governed by Tapjoy/Unity’s terms. Completing advertiser tasks in the Offerwall may share your advertising ID and device data with Tapjoy and the advertiser under their policies.</p>
+    <p>Local diamond balance is maintained as <code>mirror = server snapshot + pendingDelta</code>. The pending delta is never cleared by a server snapshot (server does not track local spend) and is restored at cold start, so spending or offline grants are not “revived” by a later server refresh.</p>
+
+    <h2>5. Subscriptions, Payments, Introductory Offers &amp; Refunds</h2>
+    <p>ZapReels offers auto-renewing VIP subscriptions: Weekly (<code>zapreels_weekly</code>) and Monthly (<code>zapreels_monthly</code>), sold exclusively through Google Play Billing Library 8.0. All prices are shown in your local currency at checkout; you are charged through Google Play at the regular price after any introductory period.</p>
+    <h3>5.1 How Subscriptions Work</h3>
+    <ul>
+        <li><b>Periods:</b> Weekly ≈ 7 days, Monthly ≈ 30 days. The displayed period and price come from the Play product’s pricing phases; “—” means price not yet loaded.</li>
+        <li><b>Auto-renewal:</b> A subscription renews automatically each period until canceled. Cancel at least 24 hours before the next renewal in Google Play (Play Store → Payments &amp; subscriptions → Subscriptions → ZapReels → Cancel). Benefits remain active until the end of the paid period.</li>
+        <li><b>Restoration:</b> Reinstalling or switching devices restores an active subscription when signed into the same Google account via “Restore Purchase” (Play Billing <code>queryPurchasesAsync</code> SUBS).</li>
+        <li><b>Server verification:</b> Purchase token/signature and expiry are verified server-side (<code>POST /subscription/report</code>); local expiry is only an estimate and never grants perpetual access (0 is not “forever”).</li>
+    </ul>
+    <h3>5.2 Introductory / Promotional Pricing</h3>
+    <p>From time to time we offer a new-subscriber introductory price of approximately <b>65% OFF</b> (computed dynamically as <code>(1 − introPrice/regularPrice) × 100</code>). Current offer where available: <b>Weekly — first 3 weeks at intro price, then regular price/week</b>; <b>Monthly — first 2 months at intro price, then regular price/month</b>. Intro pricing is for first-time subscribers only, for the first period only, then the regular price applies automatically. “New user exclusive: 65% OFF” badges and “for the first X at ¥Y (regular ¥Z)” strings in VIP and ZapReels Shop reflect the live Play pricing phases.</p>
+    <h3>5.3 Price Changes &amp; Trials</h3>
+    <p>Where a free trial exists it is a 0-price first phase; otherwise the first phase is the discounted intro price. We may change regular prices; you will be notified via Play and must accept to continue. No proration is applied on upgrade/downgrade beyond Play’s default.</p>
+    <h3>5.4 Refunds &amp; Chargebacks</h3>
+    <p>Refunds are handled by Google Play under its refund policy. Virtual items that have been consumed or granted (e.g., diamonds credited, quota granted) are not directly refundable in cash. Circumvention of Play Billing, fake receipts, or abuse of the reward system may result in suspension without refund.</p>
+
+    <h2>6. Content and Intellectual Property</h2>
+    <p>All dramas, videos, images, text, graphics, and other content are owned by or licensed to us. You may stream content solely for personal, non-commercial use through the App. You may not record, download, reproduce, redistribute, modify, scrape, or create derivative works without prior written permission. Ephemeral caching for playback and the 16 KB-eligible native library are not a license to download.</p>
+
+    <h2>7. User Conduct</h2>
+    <p>You agree not to: (a) use the App unlawfully; (b) interfere with the App or servers; (c) gain unauthorized access; (d) use automated means to scrape or use app data; (e) circumvent technological protections; (f) abuse the reward, check-in (anti-clock-rollback), or Offerwall systems; (g) loop, farm, or spoof ad views, purchases, or attribution (including bypassing the 2.5s billing-launch guard or `RewardAdLauncher` in-flight guard); or (h) use `REAL_AD_UNITS` with non-test device IDs.</p>
+
+    <h2>8. Third-Party Services, Advertising &amp; Offerwall</h2>
+    <p>The App shows ads through a Google AdMob mediation waterfall controlled by Remote Config <code>control_ad</code>. Slots are <code>SPLASH (4h TTL), ITS_UNLOCK/ITS_NORMAL/REWARD/PLAY_BACK (1h), FEED (30m queue)</code>. Networks mediated via AdMob, each with its adapter, may include:</p>
+    <ul>
+        <li><b>Google AdMob 25.4.0</b> (App ID 9801017953687132) — bidding &amp; serving</li>
+        <li><b>Pangle 6.5.1.2</b> (App ID 8865232)</li>
+        <li><b>Liftoff / Vungle 7.7.7</b> (App ID 6a8803e0d03e09dce31fdfe3)</li>
+        <li><b>InMobi 11.4.1</b> (Account 10000223375)</li>
+        <li><b>Unity LevelPlay / Tapjoy Offerwall 14.8.0</b> — direct (not mediated), placement <code>Offerwall</code>, hosted coins</li>
+    </ul>
+    <p>Ad interactions may redirect to third-party sites/apps governed by their own terms. We are not responsible for third-party content.</p>
+
+    <h2>9. Push Notifications</h2>
+    <p>Via Firebase Cloud Messaging (FCM) we may send data-only pushes rendered locally as notifications (channel <code>shortdrama_default</code>). A notification may contain <code>title/body/drama_id/start_ep</code> that deep-links ( <code>zapreels://drama?drama_id=&amp;start_ep=</code> ) into the player. You can disable pushes in-app (<code>Settings → Push</code>) or in system notification settings. Push token upload is best-effort.</p>
+
+    <h2>10. Termination</h2>
+    <p>We may suspend or terminate your access without prior notice if you violate these Terms, engage in fraud, or pose a risk to the App or users. Upon termination your right to use the App ceases immediately; unused virtual items/quotas are forfeited and do not entitle you to a refund. Active paid subscriptions remain active until their current period ends even after App termination (cancel via Google Play). Local data (history/favorites/cache/event queue) is stored in Room v3 and is removed on a destructive database downgrade.</p>
+
+    <h2>11. Disclaimer of Warranties</h2>
+    <p>The App is provided on an “as is” and “as available” basis. To the fullest extent permitted by law, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee the App will be uninterrupted, error-free, or secure. Remote Config may disable any ad slot (e.g., empty waterfall → no fill).</p>
+
+    <h2>12. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the App, whether based on warranty, contract, tort, or any other legal theory, even if advised of the possibility of such damages. Our aggregate liability shall not exceed the amount you paid to us in the 12 months preceding the claim.</p>
+
+    <h2>13. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws applicable in your jurisdiction, without regard to conflict of law principles. Any disputes shall be resolved in the courts of competent jurisdiction. If you are in the EEA, you may also have mandatory consumer-protection venue rights in your country of residence.</p>
+
+    <h2>14. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. We will notify you of material changes by posting the updated Terms within the App (and updating the “Last updated” date above). Your continued use after the effective date constitutes acceptance. If changes affect an active subscription’s price or terms, Google Play will seek your acceptance before the next renewal.</p>
+
+    <h2>15. Contact Us</h2>
+    <p>If you have any questions about these Terms, please contact us at support@zapreels.app. For privacy matters use privacy@zapreels.app.</p>
+</body>
+</html>
