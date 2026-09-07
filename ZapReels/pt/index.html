@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 12px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>Política de Privacidade do ZapReels</h1>
+    <p class="meta">Última atualização: 7 de setembro de 2026</p>
+
+    <h2>1. Informações que coletamos</h2>
+    <ul>
+        <li><b>Dispositivo e rede:</b> ID de instalação anônimo estável (<code>deviceId</code>), versão OS/app, modelo, idioma/tags (<code>en/es/pt-BR/zh-CN/de/fr/it</code>), tipo de rede, IP e região.</li>
+        <li><b>IDs publicitários:</b> Google Advertising ID (GAID/AAID) ou equivalente.</li>
+        <li><b>Uso e conteúdo:</b> dramas vistos, progresso, <code>unlockIndex</code>, missões, datas e streaks de check-in, saldo diamantes/pendingDelta, quota booster, contagens intersticial/feed, tempo de uso rating.</li>
+        <li><b>Compras e titularidade:</b> IDs Play (<code>zapreels_weekly/monthly, zapreels_booster_5/10/20, zapreels_diamond_*</code>), token, assinatura JSON, preço micros/moeda e fases, expiração.</li>
+        <li><b>Conta (se criada):</b> ID, email se fornecido. Build atual é anônima.</li>
+        <li><b>Diagnóstico:</b> traces Crashlytics, <code>AdValue/responseInfo</code> ILRD e fila de eventos.</li>
+        <li><b>Push:</b> token FCM e payload <code>title/body/drama_id/start_ep</code>.</li>
+        <li><b>Atribuição e referrer:</b> deep-link diferido, click IDs, Play Install Referrer e Meta via app ID <code>1431674870015167</code>.</li>
+    </ul>
+
+    <h2>2. Como coletamos</h2>
+    <p>(a) automaticamente via SDKs; (b) voluntariamente (suporte); (c) via parceiros terceiros; (d) via chamadas HMAC a <code>https://hwdj.nqlian.com/</code> com <code>X-Device-Id, X-Ts, X-Nonce, Rapid-Api v2.HMAC</code>; (e) via callbacks Play Billing e Referrer; (f) via formulário UMP.</p>
+
+    <h2>3. SDKs de terceiros</h2>
+    <table>
+        <tr><th>Categoria</th><th>SDK / Provedor</th><th>Propósito</th><th>Política</th></tr>
+        <tr><td>Analítica</td><td>Firebase Analytics (Google)</td><td>Analítica de uso</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analítica</td><td>Firebase Remote Config (Google)</td><td>Feature flags: <code>control_rapid/control_ad/...</code></td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analítica / Atribuição</td><td>Adjust (token <code>2sy17xu2vwu8</code>)</td><td>Atribuição</td><td>adjust.com/terms/privacy</td></tr>
+        <tr><td>Analítica / Atribuição</td><td>Tenjin (key gated)</td><td>Atribuição, DMA, receita</td><td>tenjin.com/privacy</td></tr>
+        <tr><td>Diagnóstico</td><td>Firebase Crashlytics (Google)</td><td>Crashes</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Mensagens</td><td>Firebase Cloud Messaging (Google)</td><td>Push (canal <code>shortdrama_default</code>)</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Publicidade (mediação)</td><td>Google AdMob 25.4.0</td><td>Bidding, waterfall, ILRD</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Publicidade</td><td>Pangle 6.5.1.2</td><td>Via AdMob</td><td>pangle.io privacy</td></tr>
+        <tr><td>Publicidade</td><td>Liftoff / Vungle 7.7.7</td><td>Via AdMob</td><td>liftoff.io / vungle.com privacy</td></tr>
+        <tr><td>Publicidade</td><td>InMobi 11.4.1</td><td>Via AdMob</td><td>inmobi.com/privacy</td></tr>
+        <tr><td>Offerwall</td><td>Tapjoy / Unity LevelPlay 14.8.0</td><td>Coins direto</td><td>tapjoy.com/privacy , unity.com/legal/privacy</td></tr>
+        <tr><td>Pagamentos</td><td>Google Play Billing 8.0</td><td>Assinaturas e in-app</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Instalação</td><td>Google Play Install Referrer</td><td>Atribuição</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Auxílio</td><td>Meta Facebook SDK (ID <code>1431674870015167</code>)</td><td>Referrer Meta p/ Tenjin</td><td>facebook.com/privacy</td></tr>
+    </table>
+
+    <h2>4. Como usamos</h2>
+    <p>Operar catálogo e player ExoPlayer ViewPager2 (pool 3); recompensas (check-in 7 dias, tarefas, livro <code>pendingDelta</code> + snapshot, quota por episódio); ads waterfall eCPM (<code>control_ad</code> TTLs e caps feed); fases de preço intro e verificação servidor; pushes <code>zapreels://drama</code>; fraude e 16 KB; melhorar e cumprir deveres.</p>
+
+    <h2>5. Compartilhamento e divulgação</h2>
+    <p>Não vendemos dados. Compartilhamos com §3 para seus fins (GAID/IP a AdMob/Pangle/Liftoff/InMobi; deviceId/token a Google Play; <code>AdValue/responseInfo</code> a Firebase/Tenjin/Adjust; Offerwall a Tapjoy/Unity), com backend <code>hwdj.nqlian.com</code> HMAC, com autoridades quando lei exigir, em fusão, ou com consentimento. Tapjoy hospeda Coins.</p>
+
+    <h2>6. Retenção</h2>
+    <p>Uso/comportamento até 24 meses. Agregado anonimizado indefinido. <code>UserPrefs</code> e Room (<code>history/favorite/ep_cache/event_queue</code> v3) até limpar/reinstalar; downgrade destrutivo apaga. Heartbeat WorkManager 15min retenta <code>event_queue</code>. Coins em servidor Tapjoy.</p>
+
+    <h2>7. Consentimento, escolhas de privacidade e DMA</h2>
+    <p>Formulário UMP Google no primeiro início onde necessário. <b>Fail-closed:</b> <code>UNKNOWN</code>/<code>DENIED</code> suprime ads. Debug bypass <code>UNKNOWN→NOT_REQUIRED</code> logado. Consentimento propaga a Pangle (<code>PAGConsent</code>), Liftoff/Vungle, InMobi (<code>setDoNotSell</code>), Tapjoy (<code>TJPrivacyPolicy</code>), Tenjin (<code>optIn/optOut</code> + DMA). Não chamamos <code>optInOutUsingCMP</code>.</p>
+    <p>Tenjin throttling 60s e reconecta a cada <code>onResume</code>; receita segregada: assinatura via <code>subscription(Purchase)</code> e one-time via <code>transaction</code>.</p>
+    <p>Você pode retirar consentimento reexibindo UMP, resetando GAID, desativando push em <code>Configurações → Push</code> e withholding Offerwall.</p>
+
+    <h2>8. Privacidade infantil</h2>
+    <p>Não direcionado a menores de 13 e marcamos <code>setTagForUnderAgeOfConsent(false)</code>. Se soubermos de menor &lt;13, apagamos. EEE &lt;16 use com responsável.</p>
+
+    <h2>9. Seus direitos</h2>
+    <p>Conforme jurisdição (GDPR/LGPD/CCPA): acesso, correção, exclusão, restrição/oposição, portabilidade, revogação de consentimento e opt out de venda/compartilha (não vendemos). Exercício em privacy@zapreels.app.</p>
+
+    <h2>10. Segurança</h2>
+    <p>Medidas: <code>usesCleartextTraffic=false</code>, HMAC-SHA256, <code>allowBackup=false</code>, ofuscação R8, alinhamento 16 KB, WebView bloqueada.</p>
+
+    <h2>11. Transferências internacionais</h2>
+    <p>Dados podem ser transferidos para fora da residência, inclusive EUA e regiões de Google/Adjust/Tenjin/Pangle/Liftoff/InMobi/Tapjoy/Unity, com SCCs quando exigido.</p>
+
+    <h2>12. Alterações</h2>
+    <p>Atualizamos publicando na App e data acima. Uso continuado após vigência é aceite.</p>
+
+    <h2>13. Contato</h2>
+    <p>Dúvidas: privacy@zapreels.app. Termos: support@zapreels.app.</p>
+</body>
+</html>
