@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutzerklärung</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 12px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>Datenschutzerklärung von ZapReels</h1>
+    <p class="meta">Zuletzt aktualisiert: 7. September 2026</p>
+
+    <h2>1. Welche Daten wir erfassen</h2>
+    <ul>
+        <li><b>Gerät &amp; Netzwerk:</b> stabile anonyme Installations-ID (<code>deviceId</code>), OS/App-Version, Gerätemodell, Sprache/Locale (<code>en/es/pt-BR/zh-CN/de/fr/it</code>), Netzwerktyp, IP.</li>
+        <li><b>Werbe-IDs:</b> Google Werbe-ID (GAID/AAID).</li>
+        <li><b>Nutzung &amp; Inhalte:</b> Dramen, Fortschritt, <code>unlockIndex</code>, Booster-Quota, Diamanten-Saldo/pendingDelta, Impression-Zähler, Rating-Zeit.</li>
+        <li><b>Käufe:</b> Play-Produkt-IDs (<code>zapreels_weekly/monthly, zapreels_booster_*/diamond_*</code>), Purchase-Token, Preis micros/Währung.</li>
+        <li><b>Konto (falls erstellt):</b> ID, E-Mail. Aktuell anonym.</li>
+        <li><b>Diagnose:</b> Crash-Traces (Crashlytics), <code>AdValue/responseInfo</code> für ILRD.</li>
+        <li><b>Push:</b> FCM-Token und Payload <code>title/body/drama_id/start_ep</code>.</li>
+        <li><b>Attribution:</b> Deep-Link-URL, Play Install Referrer, Meta via App-ID <code>1431674870015167</code>.</li>
+    </ul>
+
+    <h2>2. Wie wir Daten erfassen</h2>
+    <p>(a) automatisch via SDKs; (b) freiwillig; (c) via Drittpartner; (d) via HMAC-Aufrufe an <code>https://hwdj.nqlian.com/</code> mit <code>X-Device-Id, X-Ts, X-Nonce, Rapid-Api v2.HMAC</code>; (e) via Billing/Referrer; (f) via UMP-Formular.</p>
+
+    <h2>3. Drittanbieter-SDKs</h2>
+    <table>
+        <tr><th>Kategorie</th><th>SDK / Anbieter</th><th>Zweck</th><th>Richtlinie</th></tr>
+        <tr><td>Analytik</td><td>Firebase Analytics (Google)</td><td>Nutzungsanalyse</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analytik</td><td>Firebase Remote Config (Google)</td><td>Feature Flags</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analytik / Attribution</td><td>Adjust (Token <code>2sy17xu2vwu8</code>)</td><td>Attribution</td><td>adjust.com/terms/privacy</td></tr>
+        <tr><td>Analytik / Attribution</td><td>Tenjin (Key gated)</td><td>DMA, Revenue</td><td>tenjin.com/privacy</td></tr>
+        <tr><td>Diagnose</td><td>Firebase Crashlytics (Google)</td><td>Stabilität</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Messaging</td><td>Firebase Cloud Messaging (Google)</td><td>Push (Kanal <code>shortdrama_default</code>)</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Werbung (Mediation)</td><td>Google AdMob 25.4.0</td><td>Bidding, ILRD</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Werbung</td><td>Pangle 6.5.1.2</td><td>Via AdMob</td><td>pangle.io privacy</td></tr>
+        <tr><td>Werbung</td><td>Liftoff / Vungle 7.7.7</td><td>Via AdMob</td><td>liftoff.io / vungle.com privacy</td></tr>
+        <tr><td>Werbung</td><td>InMobi 11.4.1</td><td>Via AdMob</td><td>inmobi.com/privacy</td></tr>
+        <tr><td>Offerwall</td><td>Tapjoy / Unity LevelPlay 14.8.0</td><td>Coins direkt</td><td>tapjoy.com/privacy , unity.com/legal/privacy</td></tr>
+        <tr><td>Zahlung</td><td>Google Play Billing 8.0</td><td>Abos &amp; In-App</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Installation</td><td>Google Play Install Referrer</td><td>Attribution</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Hilfe</td><td>Meta Facebook SDK (ID <code>1431674870015167</code>)</td><td>Meta-Referrer</td><td>facebook.com/privacy</td></tr>
+    </table>
+
+    <h2>4. Wie wir Daten verwenden</h2>
+    <p>Betrieb Katalog &amp; Player, Belohnungen (Check-in 7 Tage, Tasks, <code>pendingDelta</code>), Ads-Waterfall TTLs, Intro-Preisphasen, Push Deep-Link, Betrugserkennung, 16 KB.</p>
+
+    <h2>5. Datenweitergabe</h2>
+    <p>Wir verkaufen keine Daten. Weitergabe an §3-Anbieter (GAID/IP an AdMob/Pangle/Liftoff/InMobi; deviceId/Token an Play; <code>AdValue</code> an Firebase/Tenjin/Adjust; Offerwall an Tapjoy/Unity), an Backend HMAC, an Behörden, bei Fusion oder mit Einwilligung.</p>
+
+    <h2>6. Datenspeicherung</h2>
+    <p>Nutzung bis 24 Monate. Lokale <code>UserPrefs</code>/Room v3 bis Löschung; destruktives Downgrade löscht. Coins auf Tapjoy-Server.</p>
+
+    <h2>7. Einwilligung, Wahlmöglichkeiten &amp; DMA</h2>
+    <p>UMP-Formular beim ersten Start wo nötig. <b>Fail-closed:</b> <code>UNKNOWN/DENIED</code> unterdrückt Ads. Verteilung an Pangle (<code>PAGConsent</code>), Liftoff/Vungle, InMobi (<code>setDoNotSell</code>), Tapjoy (<code>TJPrivacyPolicy</code>), Tenjin (<code>optIn/optOut</code> + DMA). Kein <code>optInOutUsingCMP</code>. Tenjin 60s throttle, <code>onResume</code> Reconnect. Widerruf via UMP erneut, GAID-Reset, Push-Deaktivierung.</p>
+
+    <h2>8. Kinder-Datenschutz</h2>
+    <p>Nicht an Kinder &lt;13, <code>setTagForUnderAgeOfConsent(false)</code>. Bekannte &lt;13-Daten werden gelöscht. EWR &lt;16 nur mit Vormund.</p>
+
+    <h2>9. Deine Rechte</h2>
+    <p>Je nach Rechtsraum (DSGVO/LGPD/CCPA): Auskunft, Berichtigung, Löschung, Einschränkung, Portabilität, Widerruf, Opt-Out Sale/Share (wir verkaufen nicht). Anfrage an privacy@zapreels.app.</p>
+
+    <h2>10. Datensicherheit</h2>
+    <p>Technisch-organisatorisch: <code>usesCleartextTraffic=false</code>, HMAC-SHA256, <code>allowBackup=false</code>, R8, 16 KB, WebView gesperrt.</p>
+
+    <h2>11. Internationale Übertragungen</h2>
+    <p>Übertragung außerhalb Wohnsitz, inkl. USA, mit SCCs wo nötig.</p>
+
+    <h2>12. Änderungen dieser Erklärung</h2>
+    <p>Wir können aktualisieren und posten in der App.</p>
+
+    <h2>13. Kontakt</h2>
+    <p>Fragen: privacy@zapreels.app. AGB: support@zapreels.app.</p>
+</body>
+</html>
