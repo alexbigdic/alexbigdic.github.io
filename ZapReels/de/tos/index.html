@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutzungsbedingungen</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 14px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>ZapReels Nutzungsbedingungen</h1>
+    <p class="meta">Zuletzt aktualisiert: 7. September 2026</p>
+
+    <h2>1. Annahme der Bedingungen</h2>
+    <p>Mit dem Herunterladen, Installieren oder Verwenden der ZapReels-Anwendung („die App“) erklärst du dich mit diesen Nutzungsbedingungen („Bedingungen“) einverstanden. Wenn du nicht zustimmst, verwende die App nicht.</p>
+
+    <h2>2. Teilnahmevoraussetzungen</h2>
+    <p>Du musst mindestens 13 Jahre alt sein (oder das gesetzliche Mindestalter, 16 im EWR) um die App zu nutzen. Minderjährige benötigen Zustimmung der Eltern. Die App ist als nicht an Kinder unter 13 gerichtet markiert.</p>
+
+    <h2>3. Kontoerstellung</h2>
+    <p>Die App ist ohne Konto nutzbar. Bei Installation wird eine stabile anonyme Geräte-ID für Login, Verlauf und Support erzeugt. Zukünftige Funktionen können ein Konto erfordern. Die aktuelle Build ist anonym; Abmelden löst nur Analytik aus.</p>
+
+    <h2>4. Virtuelle Gegenstände: Diamanten, Booster-Pakete &amp; Offerwall-Coins</h2>
+    <p>Virtuelle Gegenstände haben keinen Geldwert, sind nicht übertragbar und nicht außerhalb der App einlösbar.</p>
+    <h3>4.1 Diamanten</h3>
+    <p>Diamanten schalten Episoden frei. Packs als einmalige Verbrauchsprodukte in Google Play: 5.000 / 10.000 / 30.000 / 50.000. Preis in lokaler Währung im Play-Checkout. Nach Kauf muss das Produkt „verbraucht“ (consume) werden; nicht verbrauchte Käufe können nicht erneut gekauft werden und werden nach ~3 Tagen automatisch erstattet.</p>
+    <h3>4.2 Booster-Pakete</h3>
+    <p>Booster schalten mehrere Episoden auf einmal frei: 5 / 10 / 20. Ebenfalls einmalige Verbrauchsprodukte. Kauf gewährt ein Kontingent (z. B. „10 Episoden freischalten“), das beim Durchlaufen gesperrter Episoden still verbraucht wird. Die Episode, die den Kauf auslöst, ist gratis (N-Pack = aktuelle gratis + N weitere).</p>
+    <h3>4.3 Offerwall-Coins (von Tapjoy verwaltet)</h3>
+    <p>„Coins verdienen“ (Unity LevelPlay / Tapjoy) ist ein von Tapjoy verwaltetes Guthaben via <code>getCurrencyBalance</code> / <code>setEarnedCurrencyListener</code>, unabhängig von Diamanten. Aufgaben können deine Werbe-ID mit Tapjoy und Werbenden teilen.</p>
+    <p>Lokales Diamanten-Saldo = <code>Spiegel = Server-Snapshot + pendingDelta</code>. pendingDelta wird nie durch Snapshot gelöscht.</p>
+
+    <h2>5. Abonnements, Zahlungen, Einführungsangebote &amp; Erstattungen</h2>
+    <p>Auto-verlängernde VIP-Abos: Wöchentlich (<code>zapreels_weekly</code>) und Monatlich (<code>zapreels_monthly</code>), ausschließlich über Google Play Billing 8.0.</p>
+    <h3>5.1 Funktionsweise</h3>
+    <ul>
+        <li><b>Zeiträume:</b> Wöchentlich ≈7 Tage, Monatlich ≈30 Tage. Zeitraum und Preis aus Play-Preisphasen; „—“ = noch nicht geladen.</li>
+        <li><b>Auto-Verlängerung:</b> Verlängert automatisch bis Kündigung mindestens 24h vor Verlängerung in Google Play (Play Store → Zahlungen &amp; Abos → Abos → ZapReels → Kündigen). Vorteile bleiben bis Periodenende.</li>
+        <li><b>Wiederherstellung:</b> Neuinstallation/Gerätewechsel stellt aktives Abo über dasselbe Google-Konto via „Kauf wiederherstellen“ wieder her.</li>
+        <li><b>Server-Verifikation:</b> Token/Signatur und Ablauf via <code>POST /subscription/report</code>; lokale Schätzung nie dauerhaft (0 ≠ für immer).</li>
+    </ul>
+    <h3>5.2 Einführungspreis / Promotion</h3>
+    <p>Gelegentlich ca. <b>65 % Rabatt</b> dynamisch berechnet als <code>(1 − Intro/Regulär)×100</code>. Aktuell: <b>Wöchentlich — erste 3 Wochen zum Einführungspreis, danach regulär/Woche</b>; <b>Monatlich — erste 2 Monate zum Einführungspreis, danach regulär/Monat</b>. Nur für Neuabonnenten, nur erste Periode, danach automatisch regulär. Badges „Exklusiv 65 % Rabatt“ in VIP/Shop spiegeln Live-Phasen.</p>
+    <h3>5.3 Preisänderungen &amp; Testzeitraum</h3>
+    <p>Ein kostenloser Test ist erste Phase zu 0; sonst ist erste Phase der rabattierte Einführungspreis. Änderungen werden via Play notifiziert und erfordern Zustimmung.</p>
+    <h3>5.4 Erstattungen</h3>
+    <p>Erstattungen über Google Play nach dessen Richtlinie. Verbrauchte Guthaben sind nicht in bar erstattbar. Umgehung von Billing oder Missbrauch führt zu Sperrung.</p>
+
+    <h2>6. Inhalte und geistiges Eigentum</h2>
+    <p>Alle Inhalte sind unser Eigentum oder lizenziert. Nur persönliches, nicht-kommerzielles Streaming. Kein Aufzeichnen, Herunterladen, Scrapen ohne Erlaubnis.</p>
+
+    <h2>7. Verhaltensregeln</h2>
+    <p>Du verpflichtest dich, nicht: (a) rechtswidrig zu nutzen; (b) Server zu stören; (c) unbefugten Zugriff zu versuchen; (d) Scraping; (e) Schutz zu umgehen; (f) Belohnungen/Offerwall zu missbrauchen; (g) Ad-Loops/Billing-Guard 2,5s zu umgehen; (h) <code>REAL_AD_UNITS</code> mit nicht-Test-Geräten zu nutzen.</p>
+
+    <h2>8. Dienste und Werbung Dritter &amp; Offerwall</h2>
+    <p>Werbung via Google AdMob-Waterfall gesteuert durch <code>control_ad</code>. Slots: <code>SPLASH (4h), ITS_UNLOCK/ITS_NORMAL/REWARD/PLAY_BACK (1h), FEED (30m)</code>. Netzwerke via AdMob:</p>
+    <ul>
+        <li><b>Google AdMob 25.4.0</b> (ID 9801017953687132)</li>
+        <li><b>Pangle 6.5.1.2</b> (ID 8865232)</li>
+        <li><b>Liftoff / Vungle 7.7.7</b> (ID 6a8803e0d03e09dce31fdfe3)</li>
+        <li><b>InMobi 11.4.1</b> (Konto 10000223375)</li>
+        <li><b>Unity LevelPlay / Tapjoy Offerwall 14.8.0</b> — direkt, Placement <code>Offerwall</code></li>
+    </ul>
+
+    <h2>9. Push-Benachrichtigungen</h2>
+    <p>Via Firebase Cloud Messaging (Kanal <code>shortdrama_default</code>) mit <code>title/body/drama_id/start_ep</code> Deep-Link <code>zapreels://drama</code>. Deaktivierbar in Einstellungen/ System.</p>
+
+    <h2>10. Beendigung</h2>
+    <p>Wir können Zugriff ohne Ankündigung aussetzen/beenden bei Verstoß, Betrug oder Risiko. Nicht genutzte Guthaben verfallen. Bezahlte Abos laufen bis Periodenende. Lokale Daten (Room v3) werden bei destruktivem Downgrade gelöscht.</p>
+
+    <h2>11. Gewährleistungsausschluss</h2>
+    <p>App „wie besehen“ und „wie verfügbar“. Keine Gewähr für Unterbrechungsfreiheit.</p>
+
+    <h2>12. Haftungsbeschränkung</h2>
+    <p>Keine Haftung für indirekte Schäden. Gesamthaftung max. in 12 Monaten gezahlter Betrag.</p>
+
+    <h2>13. Anwendbares Recht</h2>
+    <p>Es gilt Recht deines Wohnsitzes; Verbrauchergerichtsstand im EWR bleibt.</p>
+
+    <h2>14. Änderungen dieser Bedingungen</h2>
+    <p>Wir können Bedingungen aktualisieren und posten sie in der App. Weiternutzung nach Inkrafttreten = Zustimmung. Preisänderungen aktiver Abos erfordern Play-Zustimmung.</p>
+
+    <h2>15. Kontakt</h2>
+    <p>Fragen: support@zapreels.app. Datenschutz: privacy@zapreels.app.</p>
+</body>
+</html>
