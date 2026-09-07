@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termini di Servizio</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 14px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>Termini di Servizio di ZapReels</h1>
+    <p class="meta">Ultimo aggiornamento: 7 settembre 2026</p>
+
+    <h2>1. Accettazione</h2>
+    <p>Scaricando, installando o usando l'app ZapReels ("l'App"), accetti i presenti Termini di Servizio. Se non accetti, non usare l'App.</p>
+
+    <h2>2. Idoneità</h2>
+    <p>Devi avere almeno 13 anni (o la maggiore età nella tua giurisdizione, 16 nello SEE) per usare l'App. L'App è contrassegnata come non diretta a minori di 13 anni.</p>
+
+    <h2>3. Registrazione account</h2>
+    <p>L'App è utilizzabile senza account. All'installazione generiamo un ID anonimo stabile per login, cronologia e supporto. La build attuale è anonima; il logout attiva solo analitica.</p>
+
+    <h2>4. Oggetti virtuali: diamanti, pacchetti Booster e monete Offerwall</h2>
+    <p>Gli oggetti virtuali non hanno valore monetario, non sono trasferibili né riscattabili fuori dall'App.</p>
+    <h3>4.1 Diamanti</h3>
+    <p>I diamanti sbloccano episodi. Pack come consumabili unici via Google Play: 5.000 / 10.000 / 30.000 / 50.000. Prezzo in valuta locale al checkout. Dopo l'acquisto deve essere “consumato”; altrimenti non riacquistabile e rimborsato auto dopo ~3 giorni.</p>
+    <h3>4.2 Pacchetti Booster</h3>
+    <p>Booster sblocca più episodi: 5 / 10 / 20. Stessa regola di consumo. L'episodio che avvia l'acquisto è gratis e non consuma quota (pack N = attuale gratis + N successivi).</p>
+    <h3>4.3 Monete Offerwall (gestite da Tapjoy)</h3>
+    <p>“Guadagna monete” (Unity LevelPlay / Tapjoy) è saldo ospitato via <code>getCurrencyBalance</code> / <code>setEarnedCurrencyListener</code>, indipendente dai diamanti.</p>
+    <p>Saldo diamanti locale = <code>mirror = snapshot server + pendingDelta</code>. pendingDelta mai azzerato.</p>
+
+    <h2>5. Abbonamenti, pagamenti, offerte introduttive &amp; rimborsi</h2>
+    <p>Abbonamenti VIP a rinnovo auto: Settimanale (<code>zapreels_weekly</code>) e Mensile (<code>zapreels_monthly</code>), solo via Google Play Billing 8.0.</p>
+    <h3>5.1 Come funziona</h3>
+    <ul>
+        <li><b>Periodi:</b> Settimanale ≈7 gg, Mensile ≈30 gg. Periodo e prezzo da fasi Play; “—” = non caricato.</li>
+        <li><b>Rinnovo auto:</b> Fino a disdetta almeno 24h prima su Google Play (Play Store → Pagamenti e abbonamenti → Abbonamenti → ZapReels → Annulla). Vantaggi fino a fine periodo.</li>
+        <li><b>Ripristino:</b> Via “Ripristina acquisto” sullo stesso account Google.</li>
+        <li><b>Verifica server:</b> token/firma e scadenza via <code>POST /subscription/report</code>; 0 non è perpetuo.</li>
+    </ul>
+    <h3>5.2 Prezzo introduttivo / promozione</h3>
+    <p>Occasionalmente ~<b>65% OFF</b> calcolato dinamicamente come <code>(1 − intro/regolare)×100</code>. Attuale: <b>Settimanale — prime 3 settimane a prezzo intro, poi regolare/settimana</b>; <b>Mensile — primi 2 mesi a prezzo intro, poi regolare/mese</b>. Solo nuovi abbonati, solo primo periodo. Badge “Esclusivo 65%” riflettono fasi live.</p>
+    <h3>5.3 Variazioni prezzo &amp; trial</h3>
+    <p>Trial gratuito è prima fase a 0. Variazioni notificate via Play con accettazione richiesta.</p>
+    <h3>5.4 Rimborsi</h3>
+    <p>Via Google Play. Oggetti consumati non rimborsabili in denaro. Aggiramento o abuso = sospensione.</p>
+
+    <h2>6. Contenuti e proprietà intellettuale</h2>
+    <p>Tutti i contenuti sono nostri o concessi. Solo streaming personale non commerciale. Nessuna registrazione/scraping senza permesso.</p>
+
+    <h2>7. Condotta utente</h2>
+    <p>Accetti di non: (a) uso illecito; (b) interferire con server; (c) accesso non autorizzato; (d) scraping; (e) eludere protezioni; (f) abusare reward/Offerwall; (g) loop farm o spoof ads/acquisti; (h) usare <code>REAL_AD_UNITS</code> fuori test device.</p>
+
+    <h2>8. Servizi terzi, pubblicità &amp; Offerwall</h2>
+    <p>Annunci via waterfall mediata Google AdMob controllata da <code>control_ad</code>. Slot: <code>SPLASH (4h), ITS/REWARD/PLAY_BACK (1h), FEED (30m)</code>. Reti via AdMob:</p>
+    <ul>
+        <li><b>Google AdMob 25.4.0</b> (ID 9801017953687132)</li>
+        <li><b>Pangle 6.5.1.2</b> (ID 8865232)</li>
+        <li><b>Liftoff / Vungle 7.7.7</b> (ID 6a8803e0d03e09dce31fdfe3)</li>
+        <li><b>InMobi 11.4.1</b> (Account 10000223375)</li>
+        <li><b>Unity LevelPlay / Tapjoy Offerwall 14.8.0</b> — diretto, placement <code>Offerwall</code></li>
+    </ul>
+
+    <h2>9. Notifiche push</h2>
+    <p>Via Firebase Cloud Messaging (canale <code>shortdrama_default</code>) con <code>title/body/drama_id/start_ep</code> deep-link <code>zapreels://drama</code>. Disattivabile in Impostazioni/Sistema.</p>
+
+    <h2>10. Terminazione</h2>
+    <p>Possiamo sospendere senza preavviso per violazione/frode. Oggetti non usati persi. Abbonamenti pagati fino a fine periodo. Dati Room v3 persi in downgrade distruttivo.</p>
+
+    <h2>11. Esclusione garanzie</h2>
+    <p>App “così com'è”. Nessuna garanzia di assenza interruzioni.</p>
+
+    <h2>12. Limitazione responsabilità</h2>
+    <p>Nessuna responsabilità indiretta. Totale max. importo pagato in 12 mesi.</p>
+
+    <h2>13. Legge applicabile</h2>
+    <p>Legge della tua giurisdizione; foro consumatore SEE preservato.</p>
+
+    <h2>14. Modifiche</h2>
+    <p>Pubblicazione nell'App con data aggiornata. Modifica prezzo abbo attivo richiede accettazione Play.</p>
+
+    <h2>15. Contatti</h2>
+    <p>Domande: support@zapreels.app. Privacy: privacy@zapreels.app.</p>
+</body>
+</html>
