@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隐私政策</title>
+    <style>
+        body { font-family: -apple-system, "PingFang SC", "Noto Sans SC", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 12px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>ZapReels 隐私政策</h1>
+    <p class="meta">最后更新：2026年9月7日</p>
+
+    <h2>1. 我们收集的信息</h2>
+    <ul>
+        <li><b>设备与网络：</b>稳定的匿名安装 ID（<code>deviceId</code>）、系统/应用版本、设备型号、语言与区域标签（含 <code>en/es/pt-BR/zh-CN/de/fr/it</code> 选择）、网络类型、IP 地址（服务端与 SDK 可见）及大致地区。</li>
+        <li><b>广告标识符：</b>Google 广告 ID（GAID/AAID）或等效设备级广告 ID，归因时可能使用。</li>
+        <li><b>使用与内容：</b>观看的剧集、观看进度与位置、解锁历史（<code>unlockIndex</code>）、已看集数/时长、完成的任务、每日签到日期与连续天数、加油包余额、钻石余额与 pendingDelta、首页/插屏/信息流广告曝光计数、评分使用时长、闪屏展示时间及广告互动。</li>
+        <li><b>购买与权益：</b>Play Billing 商品 ID（<code>zapreels_weekly、zapreels_monthly、zapreels_booster_5/10/20、zapreels_diamond_5000/10000/30000/50000</code>）、购买 token、订单签名与 JSON、购买时间、计费价格 micros/币种与定价阶段、订阅到期、待处理购买状态及防重放守卫。</li>
+        <li><b>账户（如创建）：</b>用户 ID、邮箱（如提供）、您分享的资料。现版本为匿名（无需邮箱）；“账户”数据在未来登录前即为匿名安装 ID。</li>
+        <li><b>诊断：</b>Firebase Crashlytics 崩溃堆栈、广告响应信息与付费事件价值 micros/精度/币种（<code>AdValue、responseInfo、adSourceName</code>）用于 ILRD，以及心跳事件队列载荷。</li>
+        <li><b>推送：</b>您允许通知时的 Firebase Cloud Messaging token，以及数据推送载荷（<code>title/body/drama_id/start_ep</code>）。</li>
+        <li><b>归因与来源：</b>延迟深链 URL、点击 ID、活动 ID、Play Install Referrer，以及经 Facebook 应用 ID <code>1431674870015167</code> 的 Meta 安装来源。</li>
+    </ul>
+
+    <h2>2. 信息收集方式</h2>
+    <p>我们通过以下方式收集信息：(a) 通过 SDK 与应用在设备上自动收集；(b) 您主动提供（如联系客服、创建账户）；(c) 通过第三方合作伙伴（分析、广告、归因、积分墙）；(d) 经 HMAC 签名的后端 API（正式为 <code>https://hwdj.nqlian.com/</code>，测试为测试域名，携带 <code>X-Device-Id、X-Ts、X-Nonce、Rapid-Api v2.HMAC-SHA256</code> 头）；(e) 通过 Google Play Billing 回调与 Play Install Referrer API；(f) 通过您与 UMP 同意表单的交互。</p>
+
+    <h2>3. 第三方 SDK</h2>
+    <p>本应用集成以下 SDK。各 SDK 按其自身隐私政策处理数据；我们建议您查阅。数据可能含 GAID、deviceId、IP、区域、购买 token 与广告事件，仅按下列用途共享。</p>
+    <table>
+        <tr><th>类别</th><th>SDK / 提供方</th><th>用途</th><th>隐私政策</th></tr>
+        <tr><td>分析</td><td>Firebase Analytics（Google）</td><td>使用分析、事件记录</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>分析</td><td>Firebase Remote Config（Google）</td><td>功能开关：<code>control_rapid/control_ad/task_config/diamond_config/app_update/subs_pop_config/offerwall_config</code></td><td>firebase.google.com/policies</td></tr>
+        <tr><td>分析/归因</td><td>Adjust（应用 token <code>2sy17xu2vwu8</code>）</td><td>安装归因与活动效果</td><td>adjust.com/terms/privacy</td></tr>
+        <tr><td>分析/归因</td><td>Tenjin（key 受占位 <code>REPLACE_WITH_TENJIN_API_KEY</code> 门控，未配置则不发送）</td><td>归因、DMA、订阅 vs 一次性收入上报</td><td>tenjin.com/privacy</td></tr>
+        <tr><td>诊断</td><td>Firebase Crashlytics（Google）</td><td>稳定性与崩溃诊断</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>消息</td><td>Firebase Cloud Messaging（Google）</td><td>推送投递（通道 <code>shortdrama_default</code>）</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>广告（聚合）</td><td>Google AdMob 25.4.0</td><td>竞价、瀑布流、<code>ad_impression</code> / <code>adPaid</code> ILRD</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>广告</td><td>Pangle 6.5.1.2</td><td>经 AdMob 聚合</td><td>pangle.io privacy</td></tr>
+        <tr><td>广告</td><td>Liftoff / Vungle 7.7.7</td><td>经 AdMob 聚合（插屏/激励）</td><td>liftoff.io / vungle.com privacy</td></tr>
+        <tr><td>广告</td><td>InMobi 11.4.1</td><td>经 AdMob 聚合</td><td>inmobi.com/privacy</td></tr>
+        <tr><td>积分墙</td><td>Tapjoy / Unity LevelPlay 积分墙 14.8.0</td><td>托管金币积分墙，直连（非聚合）</td><td>tapjoy.com/privacy , unity.com/legal/privacy</td></tr>
+        <tr><td>支付</td><td>Google Play Billing 8.0</td><td>订阅与内购</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>安装</td><td>Google Play Install Referrer</td><td>安装归因</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>归因辅助</td><td>Meta Facebook SDK（应用 ID <code>1431674870015167</code>）</td><td>Tenjin 的 Meta 安装来源解密</td><td>facebook.com/privacy</td></tr>
+    </table>
+    <p>若 Tenjin 或广告 SDK 因占位/不可用而实例为 <code>null</code>，则不会发送数据。</p>
+
+    <h2>4. 信息使用方式</h2>
+    <p>我们将数据用于：运营剧集目录与 ExoPlayer ViewPager2 播放器（3 播放器 LRU 池）；计算与追踪奖励（7 日签到状态机、看集/看时长/看广告任务、钻石账本 <code>pendingDelta</code> + 服务端快照、按集消耗的加油包额度）；通过 eCPM 瀑布流（<code>control_ad</code>）按位 TTL（SPLASH 4h、ITS/REWARD/PLAY_BACK 1h、FEED 30m）与信息流频次上限投放与衡量广告；应用首期订阅定价阶段并在服务端校验权益；尽力推送可跳转 <code>zapreels://drama</code> 的通知；检测欺诈（时钟防回拨、在途计费守卫）并保证 16 KB 页面兼容；改进体验、履行法定义务并回复支持。</p>
+
+    <h2>5. 数据共享与披露</h2>
+    <p>我们不出售您的个人信息。可能共享的情形包括：</p>
+    <ul>
+        <li>与 §3 所列 SDK 提供方按所述用途共享（例如向 AdMob/Pangle/Liftoff/InMobi 共享 GAID/IP 以竞价；向 Google Play 共享 deviceId/购买 token；向 Firebase/Tenjin/Adjust 共享 <code>AdValue/responseInfo</code> 用于 ILRD；向 Tapjoy/Unity 及其广告主共享积分墙数据）；</li>
+        <li>与我们的后端 <code>hwdj.nqlian.com</code> 进行 HMAC 校验的 API 调用；</li>
+        <li>按法律要求向执法/监管机构披露；</li>
+        <li>在合并、收购或资产出售时进行转移；</li>
+        <li>经您同意或按您指示共享。</li>
+    </ul>
+    <p>Tapjoy 是积分墙金币的托管方；我们不在本地持有金币余额（仅通过 <code>getCurrencyBalance</code> 展示）。</p>
+
+    <h2>6. 数据保留</h2>
+    <p>使用/行为数据最长保留 24 个月。聚合匿名分析可能永久保留。本地 <code>UserPrefs</code>（deviceId、语言、钻石/加油包余额、任务/签到历史、首页插屏/信息流计数、评分使用）与 Room 表（<code>history/favorite/ep_cache/event_queue</code>，schema v3）在您清除数据/重装前持续保留；破坏性降级将清除。心跳 WorkManager（15 分钟）将重试 <code>event_queue</code> 直至上传。积分墙金币余额存于 Tapjoy 服务端。账户数据保留至您删除账户或请求删除；我们在验证请求后删除/匿名化，受限于法定保留义务。</p>
+
+    <h2>7. 同意、隐私选择与 DMA</h2>
+    <p>应用在首次启动时（按需）在适用地区展示 Google UMP 同意表单。<b>Fail-closed：</b>状态为 <code>UNKNOWN</code> 或 <code>DENIED</code> 时将抑制广告请求（<code>ConsentGate.canRequestAds()</code>）。Debug 构建以记录的覆盖将 <code>UNKNOWN→NOT_REQUIRED</code> 旁路。</p>
+    <p>当您授予/拒绝时，同意将分发至：</p>
+    <ul>
+        <li><b>Pangle</b> 经 <code>PAGConsent</code>，</li>
+        <li><b>Liftoff/Vungle</b> 经 <code>VunglePrivacySettings.setGDPRStatus/setCCPAStatus</code>，</li>
+        <li><b>InMobi</b> 经 <code>InMobiPrivacyCompliance.setDoNotSell(!granted)</code>，</li>
+        <li><b>Tapjoy</b> 经 <code>TJPrivacyPolicy setUSPrivacy / setBelowConsentAge / setUsageStatsConsent</code>（subjectToGdpr 硬编码 true），</li>
+        <li><b>Tenjin</b> 经 <code>optIn/optOut</code> 及 Google DMA <code>setGoogleDMAParameters / optInGoogleDMA / optOutGoogleDMA</code>（我们不调用 Tenjin 的 <code>optInOutUsingCMP</code>，否则在 TCF 为空时会覆盖我们 fail-closed 的 optOut）。</li>
+    </ul>
+    <p>Tenjin 以 60 秒节流（<code>setConnectInterval(60s)</code>）连接，并在每次 <code>onResume</code> 重连；收入分通道上报：订阅经 <code>subscription(Purchase, price, currency)</code>（以末 pricing phase 即原价为准），一次性内购经 <code>transaction</code>——<code>iap_purchase</code> 事件不带收入以防双计。</p>
+    <p>您可通过重新展示 UMP 表单（应用内设置可用时）或系统设置撤回同意；也可重置 GAID、开启“选择停用广告个性化”、在“设置 → 推送”或系统通知设置中关闭推送，以及对积分墙 withheld 同意（“赚金币”按钮在未连接时仅提示加载中）。</p>
+
+    <h2>8. 儿童隐私</h2>
+    <p>本应用不面向 13 岁以下儿童，亦不会有意收集其数据。我们通过 <code>setTagForUnderAgeOfConsent(false)</code> 标记请求，并在同意前采取 fail-closed 措施避免展示个性化广告。若发现 13 岁以下儿童提供了个人信息，我们将删除。欧盟 16 岁以下用户请在监护人同意下使用。</p>
+
+    <h2>9. 您的权利</h2>
+    <p>根据您所在司法辖区（欧盟 GDPR、英国 GDPR、巴西 LGPD、美国 CCPA/CPRA 等），您可能享有：访问我们持有的个人数据；更正不准确数据；删除数据；限制或反对处理；以可携格式接收数据；在基于同意的处理中撤回同意；以及选择退出出售/共享（我们不出售；InMobi <code>setDoNotSell</code> 尊重您的退出）。行使权利请联系 privacy@zapreels.app，我们将在适用法律要求的时限内回应。</p>
+
+    <h2>10. 数据安全</h2>
+    <p>我们采取合理的技术与组织措施：<code>usesCleartextTraffic=false</code> + <code>network_security_config</code>、HMAC-SHA256 请求签名（<code>Rapid-Api: v2.&lt;hex&gt;</code>）、<code>allowBackup=false</code>、R8 全量混淆 + 资源压缩、16 KB 页面对齐，以及用于离线法务文档的 WebView 加固（<code>javaScriptEnabled=false、allowFileAccess=false</code>）。没有任何方法能保证 100% 安全。</p>
+
+    <h2>11. 跨境数据传输</h2>
+    <p>您的数据可能被传输并在您居住国以外的国家处理，包括美国及 Google、Adjust、Tenjin、Pangle、Liftoff、InMobi、Tapjoy/Unity 运营的其他地区。按要求时，传输依赖标准合同条款或充分性认定。</p>
+
+    <h2>12. 政策变更</h2>
+    <p>我们可能不时更新本政策。我们将在应用内发布更新后的政策并更新上方的“最后更新”日期。您在生效后继续使用即表示接受。</p>
+
+    <h2>13. 联系我们</h2>
+    <p>如对本政策或我们的数据实践有任何疑问，请联系 privacy@zapreels.app。条款相关请联系 support@zapreels.app。</p>
+</body>
+</html>
