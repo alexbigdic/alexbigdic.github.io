@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informativa sulla privacy</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 12px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: left; }
+        th { background: #1a1a1a; color: #eaeaea; }
+    </style>
+</head>
+<body>
+    <h1>Informativa sulla privacy di ZapReels</h1>
+    <p class="meta">Ultimo aggiornamento: 7 settembre 2026</p>
+
+    <h2>1. Dati che raccogliamo</h2>
+    <ul>
+        <li><b>Dispositivo &amp; rete:</b> ID anonimo stabile (<code>deviceId</code>), versione OS/app, modello, lingua/tags (<code>en/es/pt-BR/zh-CN/de/fr/it</code>), tipo rete, IP.</li>
+        <li><b>ID pubblicitari:</b> GAID/AAID.</li>
+        <li><b>Uso &amp; contenuti:</b> drammi, avanzamento, <code>unlockIndex</code>, quota Booster, saldo diamanti/pendingDelta, contatori ads, tempo rating.</li>
+        <li><b>Acquisti:</b> ID Play (<code>zapreels_weekly/monthly, zapreels_booster_*/diamond_*</code>), token, prezzo micros.</li>
+        <li><b>Account (se creato):</b> ID, email. Attuale anonimo.</li>
+        <li><b>Diagnostica:</b> trace Crashlytics, <code>AdValue/responseInfo</code> ILRD.</li>
+        <li><b>Push:</b> token FCM e payload <code>title/body/drama_id/start_ep</code>.</li>
+        <li><b>Attribuzione:</b> deep-link differito, Play Install Referrer, Meta via ID <code>1431674870015167</code>.</li>
+    </ul>
+
+    <h2>2. Come raccogliamo</h2>
+    <p>(a) via SDK; (b) volontariamente; (c) partner terzi; (d) chiamate HMAC a <code>https://hwdj.nqlian.com/</code>; (e) Billing/Referrer; (f) modulo UMP.</p>
+
+    <h2>3. SDK di terze parti</h2>
+    <table>
+        <tr><th>Categoria</th><th>SDK / Fornitore</th><th>Scopo</th><th>Informativa</th></tr>
+        <tr><td>Analitica</td><td>Firebase Analytics (Google)</td><td>Utilizzo</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analitica</td><td>Firebase Remote Config (Google)</td><td>Feature flag</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Analitica / Attribuzione</td><td>Adjust (token <code>2sy17xu2vwu8</code>)</td><td>Attribuzione</td><td>adjust.com/terms/privacy</td></tr>
+        <tr><td>Analitica / Attribuzione</td><td>Tenjin (key gated)</td><td>DMA, ricavi</td><td>tenjin.com/privacy</td></tr>
+        <tr><td>Diagnostica</td><td>Firebase Crashlytics (Google)</td><td>Stabilità</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Messaggistica</td><td>Firebase Cloud Messaging (Google)</td><td>Push</td><td>firebase.google.com/policies</td></tr>
+        <tr><td>Pubblicità (mediazione)</td><td>Google AdMob 25.4.0</td><td>Bidding, ILRD</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Pubblicità</td><td>Pangle 6.5.1.2</td><td>Via AdMob</td><td>pangle.io privacy</td></tr>
+        <tr><td>Pubblicità</td><td>Liftoff / Vungle 7.7.7</td><td>Via AdMob</td><td>liftoff.io / vungle.com privacy</td></tr>
+        <tr><td>Pubblicità</td><td>InMobi 11.4.1</td><td>Via AdMob</td><td>inmobi.com/privacy</td></tr>
+        <tr><td>Offerwall</td><td>Tapjoy / Unity LevelPlay 14.8.0</td><td>Monete diretto</td><td>tapjoy.com/privacy , unity.com/legal/privacy</td></tr>
+        <tr><td>Pagamento</td><td>Google Play Billing 8.0</td><td>Abbonamenti</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Installazione</td><td>Google Play Install Referrer</td><td>Attribuzione</td><td>policies.google.com/privacy</td></tr>
+        <tr><td>Ausilio</td><td>Meta Facebook SDK (ID <code>1431674870015167</code>)</td><td>Referrer</td><td>facebook.com/privacy</td></tr>
+    </table>
+
+    <h2>4. Come utilizziamo</h2>
+    <p>Catalogo &amp; player, ricompense (check-in, ledger <code>pendingDelta</code>), waterfall TTLs, fasi intro, push deep-link, frode, 16 KB.</p>
+
+    <h2>5. Condivisione e divulgazione</h2>
+    <p>Non vendiamo. Condivisione con §3 (GAID/IP a AdMob/Pangle/Liftoff/InMobi; deviceId/token a Play; <code>AdValue</code> a Firebase/Tenjin/Adjust; Offerwall a Tapjoy/Unity), con backend HMAC, autorità, fusione o consenso.</p>
+
+    <h2>6. Conservazione</h2>
+    <p>Uso fino a 24 mesi. Locale <code>UserPrefs</code>/Room v3 fino a cancellazione; downgrade distruttivo cancella. Monete su server Tapjoy.</p>
+
+    <h2>7. Consenso, scelte &amp; DMA</h2>
+    <p>Modulo UMP al primo avvio dove richiesto. <b>Fail-closed:</b> <code>UNKNOWN/DENIED</code> sopprime ads. Propagazione a Pangle (<code>PAGConsent</code>), Liftoff/Vungle, InMobi (<code>setDoNotSell</code>), Tapjoy (<code>TJPrivacyPolicy</code>), Tenjin (<code>optIn/optOut</code> + DMA). Nessun <code>optInOutUsingCMP</code>. Tenjin throttle 60s, <code>onResume</code> reconnect.</p>
+    <p>Puoi revocare via UMP, reset GAID, opt-out push, withhold Offerwall.</p>
+
+    <h2>8. Privacy dei minori</h2>
+    <p>Non diretto &lt;13, <code>setTagForUnderAgeOfConsent(false)</code>. EEE &lt;16 con tutore.</p>
+
+    <h2>9. I tuoi diritti</h2>
+    <p>A seconda della giurisdizione (GDPR/LGPD/CCPA): accesso, correzione, cancellazione, limitazione, portabilità, revoca, opt-out vendita/condivisione. Contatta privacy@zapreels.app.</p>
+
+    <h2>10. Sicurezza</h2>
+    <p>Misure: <code>usesCleartextTraffic=false</code>, HMAC-SHA256, <code>allowBackup=false</code>, R8, 16 KB, WebView bloccata.</p>
+
+    <h2>11. Trasferimenti internazionali</h2>
+    <p>Trasferimento fuori residenza inclusi USA con SCCs se richiesto.</p>
+
+    <h2>12. Modifiche</h2>
+    <p>Pubblicazione nell'App con data aggiornata.</p>
+
+    <h2>13. Contatti</h2>
+    <p>Privacy: privacy@zapreels.app. Termini: support@zapreels.app.</p>
+</body>
+</html>
