@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LauncherX 隐私政策</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    background: #0e1216; color: #e6eaf0;
+    font: 16px/1.85 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 32px 20px 72px; }
+  header { border-bottom: 1px solid #232a34; padding-bottom: 20px; margin-bottom: 8px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo { width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(135deg, #17399e, #2a66e0 55%, #3e9bee); position: relative; box-shadow: 0 4px 10px rgba(5, 33, 80, .35); }
+  .logo::before, .logo::after { content: ""; position: absolute; left: 9px; width: 9px; height: 9px; border-radius: 3px; background: #fff; }
+  .logo::before { top: 9px; box-shadow: 13px 0 0 #fff; }
+  .logo::after { top: 22px; box-shadow: 13px 0 0 #fff; }
+  h1 { font-size: 26px; margin: 0; letter-spacing: .3px; }
+  .sub { color: #9fb3c8; font-size: 14px; margin-top: 2px; }
+  .meta { color: #9fb3c8; font-size: 14px; margin: 16px 0 0; }
+  .meta code { background: #171d26; padding: 1px 6px; border-radius: 5px; color: #cfe0f5; }
+  h2 { font-size: 19px; margin: 34px 0 10px; padding-left: 11px; border-left: 3px solid #4c9aff; }
+  h3 { font-size: 16px; margin: 20px 0 6px; color: #cfe0f5; }
+  p, li { color: #dbe3ec; }
+  ul { padding-left: 22px; }
+  li { margin: 5px 0; }
+  a { color: #7cb6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  th, td { border: 1px solid #2a323c; padding: 9px 11px; text-align: left; vertical-align: top; }
+  th { background: #171d26; color: #cfe0f5; font-weight: 600; }
+  .note { background: #14202e; border: 1px solid #24384f; border-radius: 10px; padding: 12px 15px; margin: 14px 0; font-size: 15px; }
+  .ph { background: #2a2113; border: 1px dashed #7a5c1e; border-radius: 5px; padding: 0 6px; color: #ffd479; }
+  footer { margin-top: 44px; border-top: 1px solid #232a34; padding-top: 18px; color: #8896a6; font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>LauncherX 隐私政策</h1>
+        <div class="sub">LauncherX（<code>com.nq.luancherX</code>）· Android 桌面启动器</div>
+      </div>
+    </div>
+    <p class="meta">
+      生效日期：<span class="ph">[生效日期]</span>　|　最近更新：<span class="ph">[更新日期]</span>　|　
+      语言：<a href="privacy-policy.en.html">English</a>
+    </p>
+  </header>
+
+  <div class="note">
+    LauncherX 是一款<strong>本地优先</strong>的桌面启动器：无需注册账号，桌面布局、设置与个性化数据默认仅保存在你的设备上。
+    本政策说明我们收集哪些信息、如何使用，以及你可以如何控制。
+  </div>
+
+  <h2>一、我们收集与处理的信息</h2>
+
+  <h3>1. 无需账号，不收集身份信息</h3>
+  <p>
+    使用 LauncherX 无需注册或登录。我们<strong>不收集</strong>你的姓名、电子邮箱、手机号、账号密码、通讯录、短信、照片或精确位置等身份信息。
+  </p>
+
+  <h3>2. 仅保存在你设备上的数据（我们不会上传）</h3>
+  <ul>
+    <li><strong>桌面与个性化数据</strong>：桌面分页与网格布局、Dock、文件夹、自建应用分组、隐藏应用、自定义图标与名称。</li>
+    <li><strong>偏好设置</strong>：网格行列、图标大小与形状、字体缩放、手势映射、夜间模式、搜索源、广告/付费相关开关等。</li>
+    <li><strong>壁纸</strong>：你选择的预设或自定义图片；自定义壁纸会复制到应用私有目录，以在你重启后继续生效。</li>
+    <li><strong>订阅权益缓存</strong>：仅记录「是否已订阅 Plus」的本地状态，用于离线宽限期内保持权益。</li>
+    <li><strong>备份文件</strong>：手动导出的备份由你选择保存位置；自动备份写入应用外部私有目录（系统设置中显示为 LauncherX 的数据），最多保留最近 3 份。</li>
+  </ul>
+  <p>卸载应用会删除上述应用私有数据；系统「设置 → 应用 → LauncherX → 存储」中的「清除数据」也会将其清除。</p>
+
+  <h3>3. 设备权限及其用途</h3>
+  <p>为实现启动器功能，应用会申请以下权限。敏感权限均需你在系统界面中手动开启，且可随时关闭。</p>
+  <table>
+    <thead><tr><th>权限 / 能力</th><th>用途</th><th>是否上传</th></tr></thead>
+    <tbody>
+      <tr><td>读取已安装应用列表</td><td>启动器核心功能：展示、搜索、启动与管理应用</td><td>否，仅本机处理</td></tr>
+      <tr><td>通知使用权（通知监听服务）</td><td>仅统计「各应用的未读通知数量」用于图标角标；并用于获取媒体会话信息</td><td>否，不读取或上传通知内容</td></tr>
+      <tr><td>无障碍服务（可选，默认关闭）</td><td>执行系统级动作：下拉通知面板、快速设置、最近任务、锁屏。<strong>不读取窗口内容</strong>（已声明 <code>canRetrieveWindowContent=false</code>）</td><td>否</td></tr>
+      <tr><td>使用情况访问（可选）</td><td>在搜索建议/负一屏中显示「常用应用」。未授权时该功能自动隐藏，不影响其他功能</td><td>否，仅本机读取</td></tr>
+      <tr><td>媒体会话</td><td>在媒体条带显示当前播放信息并提供播放控制</td><td>否</td></tr>
+      <tr><td>网络与网络状态</td><td>广告、崩溃与使用分析、远程配置、订阅校验</td><td>见下文第三方服务</td></tr>
+      <tr><td>设置壁纸</td><td>应用你选择的壁纸</td><td>否</td></tr>
+      <tr><td>展开状态栏</td><td>手势「通知面板」</td><td>否</td></tr>
+      <tr><td>开机自启 / 保持唤醒</td><td>开机后恢复桌面；广告与分析 SDK 的正常工作</td><td>否</td></tr>
+    </tbody>
+  </table>
+
+  <h2>二、第三方服务</h2>
+  <p>
+    以下服务由 Google 提供。我们仅按需启用，并尽量在取得你的同意后启用分析/崩溃/广告能力。这些服务的处理行为受其各自隐私政策约束。
+  </p>
+  <table>
+    <thead><tr><th>服务</th><th>用途</th><th>可能处理的信息</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Google AdMob（广告）</td>
+        <td>在设置、抽屉、负一屏等位置展示广告；Plus 订阅用户不展示广告</td>
+        <td>广告 ID（GAID）、IP 地址、设备与网络信息。是否个性化取决于你在同意界面（UMP）中的选择</td>
+      </tr>
+      <tr>
+        <td>Firebase Analytics</td>
+        <td>产品使用分析（<strong>默认关闭，取得同意后开启</strong>）</td>
+        <td>应用事件（如首次启动、启动应用、同意结果、订阅流程结果）、Firebase 应用实例 ID、按你同意范围允许的广告 ID</td>
+      </tr>
+      <tr>
+        <td>Firebase Crashlytics</td>
+        <td>崩溃与稳定性诊断（<strong>默认关闭，取得同意后开启</strong>）</td>
+        <td>崩溃堆栈、应用版本、设备型号与系统版本、用于崩溃归因的安装标识</td>
+      </tr>
+      <tr>
+        <td>Firebase Remote Config</td>
+        <td>远程下发功能开关与配置参数（不涉及个人信息）</td>
+        <td>请求所需的常规网络信息</td>
+      </tr>
+      <tr>
+        <td>Google Play Billing</td>
+        <td>处理 Plus 订阅的购买、续费、恢复与退款</td>
+        <td>交易与订阅状态由 Google Play 处理；<strong>我们不接触、不存储你的支付卡信息</strong></td>
+      </tr>
+      <tr>
+        <td>Google UMP（用户消息平台）</td>
+        <td>展示同意/隐私选项并记录你的选择</td>
+        <td>你的同意状态</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>我们<strong>不会出售</strong>你的个人信息，也不会为第三方自身的营销目的而共享。</p>
+
+  <h2>三、信息的存储与安全</h2>
+  <ul>
+    <li>本地数据保存在应用私有目录中；Android 系统在应用沙箱层面提供隔离保护。</li>
+    <li>我们不建设账号系统，也不在自有服务器上存储你的桌面数据。</li>
+    <li>广告分析类数据由 Google 按其政策存储于其服务器，可能位于你所在国家/地区之外。</li>
+    <li>本地数据保留至你卸载应用或在系统设置中清除数据为止。</li>
+  </ul>
+
+  <h2>四、你的权利与选择</h2>
+  <ul>
+    <li><strong>关闭个性化广告</strong>：可在 Google 设置中「广告」页关闭广告个性化，或重置/删除广告 ID。</li>
+    <li><strong>撤销权限</strong>：随时在系统设置中关闭通知使用权、无障碍服务、使用情况访问。</li>
+    <li><strong>清除本地数据</strong>：系统设置中清除应用数据，或卸载应用。</li>
+    <li><strong>查阅、更正、删除</strong>：由于数据保存在你的设备上，你可直接在应用内修改；如需行使其他权利，请联系我们。</li>
+    <li><strong>订阅管理</strong>：在 Google Play「订阅」中随时取消 Plus 订阅。</li>
+  </ul>
+
+  <h2>五、未成年人</h2>
+  <p>
+    LauncherX 面向一般用户，不专门面向儿童，也不会有意收集儿童的个人信息。若你为未成年人，请在监护人指导下使用本应用。
+    若我们发现在未获监护人同意的情况下收集了儿童信息，将尽快删除。若你是监护人并有相关疑问，请联系我们。
+  </p>
+
+  <h2>六、政策变更</h2>
+  <p>
+    我们可能不时更新本政策。重大变更将通过应用内提示或本页面显著位置告知，并更新「最近更新」日期。
+    继续使用本应用即表示你接受更新后的政策。
+  </p>
+
+  <h2>七、联系我们</h2>
+  <p>
+    如对本政策或你的个人信息有任何疑问、意见或投诉，请通过以下方式联系：
+  </p>
+  <ul>
+    <li>开发者：<span class="ph">[开发者名称]</span></li>
+    <li>电子邮箱：<span class="ph">[联系邮箱]</span></li>
+  </ul>
+
+  <footer>
+    <span>© <span class="ph">[开发者名称]</span></span>
+    <a href="index.html">法律文档索引</a>
+    <a href="terms-of-service.zh-CN.html">用户协议</a>
+    <a href="privacy-policy.en.html">English</a>
+  </footer>
+</div>
+</body>
+</html>
