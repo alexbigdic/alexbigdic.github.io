@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LauncherX · 法律文档</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #0e1216; color: #e6eaf0;
+    font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 72px; }
+  .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+  .logo { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #17399e, #2a66e0 55%, #3e9bee); position: relative; box-shadow: 0 6px 14px rgba(5, 33, 80, .4); }
+  .logo::before, .logo::after { content: ""; position: absolute; left: 11px; width: 12px; height: 12px; border-radius: 4px; background: #fff; }
+  .logo::before { top: 11px; box-shadow: 17px 0 0 #fff; }
+  .logo::after { top: 29px; box-shadow: 17px 0 0 #fff; }
+  h1 { font-size: 24px; margin: 0; }
+  .sub { color: #9fb3c8; font-size: 14px; }
+  .card {
+    display: block; text-decoration: none; color: inherit;
+    background: #141922; border: 1px solid #232a34; border-radius: 14px;
+    padding: 16px 18px; margin: 12px 0; transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: #4c9aff; transform: translateY(-1px); }
+  .card .t { font-size: 17px; font-weight: 600; }
+  .card .d { color: #9fb3c8; font-size: 14px; margin-top: 3px; }
+  .badge { display: inline-block; font-size: 12px; color: #7cb6ff; border: 1px solid #2b4a72; border-radius: 20px; padding: 1px 10px; margin-left: 8px; vertical-align: 2px; }
+  .sec { color: #9fb3c8; font-size: 13px; letter-spacing: .6px; margin: 26px 0 6px; }
+  footer { margin-top: 40px; color: #8896a6; font-size: 13px; border-top: 1px solid #232a34; padding-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"></div>
+    <div>
+      <h1>LauncherX 法律文档</h1>
+      <div class="sub">LauncherX · <code>com.nq.luancherX</code> · Android 桌面启动器</div>
+    </div>
+  </div>
+
+  <div class="sec">中文</div>
+  <a class="card" href="privacy-policy.zh-CN.html">
+    <div class="t">隐私政策<span class="badge">中文</span></div>
+    <div class="d">说明我们收集哪些信息、如何使用，以及你如何控制自己的数据。</div>
+  </a>
+  <a class="card" href="terms-of-service.zh-CN.html">
+    <div class="t">用户协议<span class="badge">中文</span></div>
+    <div class="d">使用本应用的条款，包括订阅与自动续费、免责声明与争议解决。</div>
+  </a>
+
+  <div class="sec">English</div>
+  <a class="card" href="privacy-policy.en.html">
+    <div class="t">Privacy Policy<span class="badge">EN</span></div>
+    <div class="d">What information is involved, how it is used, and how you stay in control.</div>
+  </a>
+  <a class="card" href="terms-of-service.en.html">
+    <div class="t">Terms of Service<span class="badge">EN</span></div>
+    <div class="d">Terms for using the app, including subscriptions and auto-renewal, disclaimers and dispute resolution.</div>
+  </a>
+
+  <footer>
+    <div>© <span class="ph">[开发者名称 / Developer Name]</span> · 联系邮箱 / Email: <span class="ph">[联系邮箱 / Contact Email]</span></div>
+    <div>生效日期 / Effective: <span class="ph">[生效日期 / Effective Date]</span></div>
+  </footer>
+</div>
+</body>
+</html>
