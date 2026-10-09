@@ -1,1 +1,113 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Deletion Instructions — ZapReels</title>
+    <style>
+        body { font-family: -apple-system, "Roboto", sans-serif; background: #0d0d0d; color: #eaeaea; margin: 16px; line-height: 1.55; font-size: 15px; }
+        h1 { font-size: 20px; margin-bottom: 4px; }
+        h2 { font-size: 16px; margin-top: 20px; color: #d8b4ff; }
+        h3 { font-size: 14px; margin-top: 12px; color: #b9a0ff; }
+        p, li { color: #cfcfcf; }
+        a { color: #9dbeff; }
+        .meta { color: #7a7a7a; font-size: 12px; margin-bottom: 20px; }
+        .box { border: 1px solid #333; background: #151515; padding: 10px 12px; margin: 12px 0; border-radius: 6px; }
+        code { color: #ffd9a0; }
+        ol, ul { padding-left: 22px; }
+    </style>
+</head>
+<body>
+    <h1>ZapReels — Data Deletion Instructions</h1>
+    <p class="meta">Applies to the Android app <b>ZapReels</b> (<code>com.nq.ZapReels</code>). Last updated: October 9, 2026.</p>
+
+    <p>ZapReels is usable without creating an account. We identify your installation by a
+    <b>random anonymous device ID</b> — we do not ask for your name, email address or phone number.
+    This page explains how to delete the data associated with your installation.</p>
+
+    <div class="box">
+        <b>Two ways to delete your data</b>
+        <ol>
+            <li><b>Immediately, on your device</b> — clear the app's storage or uninstall the app. This removes all data stored on your phone.</li>
+            <li><b>Server-side deletion request</b> — email <a href="mailto:nqhl259@gmail.com">nqhl259@gmail.com</a> and we will delete the records our backend holds for your installation.</li>
+        </ol>
+    </div>
+
+    <h2>1. Delete data stored on your device (immediate, no request needed)</h2>
+    <p>All locally stored data lives in the app's private storage. You can erase it at any time:</p>
+    <ul>
+        <li><b>Android Settings → Apps → ZapReels → Storage → Clear storage</b> (sometimes labelled “Clear data”), or</li>
+        <li><b>Uninstall the app</b> (long-press the ZapReels icon → Uninstall).</li>
+    </ul>
+    <p>This permanently deletes:</p>
+    <ul>
+        <li>your anonymous device ID and app preferences (language, diamond balance, booster quota, check-in/task counters, ad-frequency counters);</li>
+        <li>your local watch history and favourites, cached episode data, and your unlock progress (<code>unlockIndex</code>);</li>
+        <li>any analytics events still waiting in the on-device upload queue.</li>
+    </ul>
+    <p>After clearing, the app behaves like a fresh installation and a <b>new anonymous device ID</b> is generated.
+    Note that clearing local storage does <b>not</b> delete records that were already sent to our backend or to the
+    third-party services listed in §4 — use §2 for those.</p>
+
+    <h2>2. Request deletion of server-side data</h2>
+    <p>Email <a href="mailto:nqhl259@gmail.com?subject=Data%20Deletion%20Request">nqhl259@gmail.com</a>
+    with the subject <b>“Data Deletion Request”</b> and include:</p>
+    <ul>
+        <li>the anonymous <b>device ID</b> of your installation, if you have it;</li>
+        <li>if you do not have the device ID: your <b>approximate install date</b>, <b>country</b>, <b>app language</b> and <b>app version</b> (Settings → Version);</li>
+        <li>any detail that helps us locate the record (for example, a subscription or in-app purchase you made).</li>
+    </ul>
+    <p>Because the app is anonymous, the device ID is the only unique key we hold; if you cannot provide it we will
+    attempt to locate your record from the details above and will tell you if we cannot identify it uniquely.</p>
+
+    <h3>What happens next</h3>
+    <ul>
+        <li>We acknowledge your request within <b>7 days</b>.</li>
+        <li>We complete deletion within <b>30 days</b> of verifying the request (or within the period required by your local law).</li>
+        <li>We confirm by email once the deletion is done.</li>
+    </ul>
+    <p><b>Please note:</b> deletion is irreversible. Your watch history, favourites, unlock progress, task/check-in
+    progress and any unused booster quota associated with that installation will be lost and cannot be restored.</p>
+
+    <h2>3. What we delete, and what we may keep</h2>
+    <p>On a verified request we delete (or irreversibly anonymise) the records we hold for your installation, including:</p>
+    <ul>
+        <li>your anonymous device ID and the usage/behavioural events linked to it (dramas viewed, watch progress, unlocks, tasks, check-in, ad impressions);</li>
+        <li>your server-side profile state (diamond balance snapshot, booster quota, task progress);</li>
+        <li>your push token, if you had notifications enabled.</li>
+    </ul>
+    <p>We may retain, where the law requires it or where we need it to defend legal claims:</p>
+    <ul>
+        <li><b>aggregated, anonymised statistics</b> that can no longer be linked to you;</li>
+        <li><b>purchase and tax records</b> — these are held by <b>Google Play</b> as merchant of record, not by us, and we cannot delete them;</li>
+        <li>records we must keep for <b>fraud prevention, security or accounting</b> obligations, for the period the law prescribes.</li>
+    </ul>
+    <p>Our standard retention period for usage/behavioural data is <b>up to 24 months</b>. See the
+    <a href="https://alexbigdic.github.io/ZapReels/">Privacy Policy</a> (§6 Data Retention, §9 Your Rights) for details.</p>
+
+    <h2>4. Data held by third-party services</h2>
+    <p>Some data is processed independently by our service providers, each under its own privacy policy. Deleting it
+    requires a request to that provider (or using the controls it offers):</p>
+    <ul>
+        <li><b>Google</b> — Firebase Analytics / Remote Config / Crashlytics / Cloud Messaging, Google AdMob and Google Play Billing:
+            <a href="https://myaccount.google.com/data-and-privacy">Google data &amp; privacy controls</a>;
+            ads personalisation: <a href="https://adssettings.google.com/">Ads Settings</a> (you can also reset or delete your Advertising ID in Android Settings → Google → Ads).</li>
+        <li><b>Adjust</b> — install attribution: <a href="https://www.adjust.com/terms/privacy-policy/">adjust.com privacy policy</a>.</li>
+        <li><b>Tenjin</b> — attribution and revenue measurement: <a href="https://www.tenjin.com/privacy/">tenjin.com/privacy</a>.</li>
+        <li><b>Ad networks</b> — Pangle, Liftoff/Vungle and InMobi (mediated through AdMob): see their respective privacy policies for opt-out and deletion tools.</li>
+        <li><b>Meta / Facebook</b> — install-referrer decryption via the Facebook SDK. ZapReels does <b>not</b> offer Facebook Login, so no Facebook account is linked to your installation. You can control Meta's own off-app data in
+            <a href="https://www.facebook.com/off_facebook_activity/">Facebook → Off-Facebook Activity</a>.</li>
+    </ul>
+
+    <h2>5. Children</h2>
+    <p>The app is not directed to children under 13. If you are a parent or guardian and believe a child has used the
+    app, contact us at the address below and we will delete the associated data.</p>
+
+    <h2>6. Contact</h2>
+    <p>Data deletion requests and privacy questions: <a href="mailto:nqhl259@gmail.com">nqhl259@gmail.com</a><br />
+    Other support matters: <a href="mailto:support@zapreels.app">support@zapreels.app</a></p>
+    <p class="meta">This page is provided to comply with Google Play’s Data deletion requirements and with applicable
+    data-protection laws (GDPR, UK GDPR, LGPD, CCPA/CPRA).</p>
+</body>
+</html>
